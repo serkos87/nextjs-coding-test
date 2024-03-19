@@ -1,3 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  background-color: #141414;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 1rem;
+}
+
+a {
+  color: #fc6;
+}

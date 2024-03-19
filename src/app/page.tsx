@@ -1,95 +1,26 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main>
+      <h1>Home</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis massa sit amet
+        elementum fringilla. Maecenas sed molestie augue. Fusce tincidunt, est et malesuada mattis,
+        dolor erat vulputate ipsum, id sodales elit augue vitae est. Quisque sodales vitae arcu vel
+        tempus. Morbi id lacus non arcu vulputate ullamcorper nec sed urna. Quisque sollicitudin
+        justo nisl, in commodo magna convallis nec. Nulla facilisi. Morbi condimentum auctor nulla
+        fermentum viverra. Pellentesque cursus est sed lobortis varius. Suspendisse tincidunt vel
+        lectus a euismod. Nulla id orci facilisis, accumsan arcu id, pellentesque nisi. Cras id
+        congue nisi.
+      </p>
+      <p>
+        Donec vulputate ante nec nisi consequat, ut gravida nibh aliquet. Nam condimentum tellus
+        ligula, at consectetur sapien vehicula in. Suspendisse congue finibus fermentum. Quisque in
+        feugiat leo. Aenean eget risus mattis, efficitur purus ut, iaculis enim. Vestibulum rhoncus,
+        sem a aliquet imperdiet, mi ipsum condimentum massa, eget iaculis ipsum mi fringilla nulla.
+        Morbi convallis semper ligula quis sodales. Suspendisse id arcu eu ligula blandit
+        condimentum sed quis turpis. Suspendisse ac diam cursus, facilisis quam ut, porta nulla.
+        Nulla sagittis sed magna quis pretium.
+      </p>
     </main>
   );
 }
