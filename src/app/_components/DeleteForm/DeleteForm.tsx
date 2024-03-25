@@ -29,7 +29,7 @@ export const DeleteForm = (props: IDeleteFormProps) => {
   // Imitation of element DELETE from list
   const handleRemove = useCallback(() => {
     onTodoRemove(id);
-  }, [id]);
+  }, [id, onTodoRemove]);
 
   return (
     <form action={formAction} className={styles.deleteForm}>

@@ -1,0 +1,22 @@
+.createForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  max-width: 400px;
+}
+
+.createFormLabel {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.createFormInput {
+  height: 2rem;
+  padding: 0.5rem;
+  color: #fff;
+  background: none;
+  outline: none;
+  border: 1px solid #fff;
+  align-self: stretch;
+}
