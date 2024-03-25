@@ -8,14 +8,13 @@ import styles from './DeleteForm.module.css';
 import { ButtonElement } from '../ButtonElement/ButtonElement';
 import { ButtonActionEnum } from '../../Enum/ButtonAction.enum';
 import { useCallback } from 'react';
+import { ITodo } from '../../interfaces/todo.interface';
 
 const initialState = {
   message: null,
 };
 
-interface IDeleteFormProps {
-  id: string;
-  title: string;
+interface IDeleteFormProps extends Pick<ITodo, 'title' | 'id'> {
   onTodoRemove: (id: string) => void;
 }
 

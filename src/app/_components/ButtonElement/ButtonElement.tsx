@@ -18,7 +18,8 @@ export const ButtonElement = (props: IButtonElementProps) => {
       type="submit"
       className={styles.buttonElement}
       aria-disabled={pending}
-      onClick={props.handleButtonAction}
+      // Workaround to imitate actions
+      // onClick={props.handleButtonAction}
     >
       {props.label}
     </button>
