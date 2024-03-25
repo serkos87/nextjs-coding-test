@@ -1,0 +1,18 @@
+.buttonElement {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  flex: 0 0 auto;
+}
+
+.buttonElement:disabled {
+  opacity: 0.3;
+  cursor: default;
+}

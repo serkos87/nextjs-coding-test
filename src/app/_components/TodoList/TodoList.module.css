@@ -1,0 +1,18 @@
+.todoListing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.todoListing:not(:last-child) {
+  border-bottom: 1px solid rgba(158, 164, 164, 0.5);
+}
+
+.todoTitle {
+  margin: 0;
+  color: #fc6;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+}

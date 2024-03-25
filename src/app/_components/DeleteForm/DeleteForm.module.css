@@ -1,0 +1,15 @@
+.deleteForm {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.deleteFormMessagePlaceholder {
+  font-size: 0.6rem;
+  line-height: 1;
+  margin: 0;
+
+  position: absolute;
+  left: 110%;
+  width: 150px;
+}
