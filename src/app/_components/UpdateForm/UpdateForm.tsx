@@ -2,13 +2,16 @@
 
 import { useMemo, useRef } from 'react';
 import { deleteTodo, updateTodo } from '@/app/actions/actions';
-import { ITodo } from '../../interfaces/todo.interface';
+import { Todo } from '../../types/todo.type';
 
 import styles from './UpdateForm.module.css';
 
-interface IUpdateFormProps extends Pick<ITodo, 'title' | 'id'> {}
+type UpdateFormProps = {
+  title: string;
+  id: string;
+};
 
-export const UpdateForm = (props: IUpdateFormProps) => {
+export const UpdateForm = (props: UpdateFormProps) => {
   const { id, title } = props;
   const titleInputElement = useRef(null);
 
@@ -37,7 +40,7 @@ export const UpdateForm = (props: IUpdateFormProps) => {
       <fieldset className={styles.updateFormFieldset}>
         <button
           type="button"
-          className={styles.buttonElement}
+          className={`${styles.buttonElement} ${styles.btnColored}`}
           onClick={async () => {
             await updateTodo(id, titleText);
           }}

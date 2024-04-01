@@ -1,9 +1,15 @@
-import { ITodo } from '@/app/interfaces/todo.interface';
+import { Todo } from '@/app/types/todo.type';
 import { UpdateForm } from '../../_components/UpdateForm/UpdateForm';
 import { loadTodoById } from './loadTodoById';
 
-export default async function UpdateTodo({ params }: { params: { id: string } }) {
-  const data: ITodo = await loadTodoById(params.id);
+type RouteParams = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function UpdateTodo({ params }: RouteParams) {
+  const data: Todo = await loadTodoById(params.id);
   const { id, title } = data;
 
   return (

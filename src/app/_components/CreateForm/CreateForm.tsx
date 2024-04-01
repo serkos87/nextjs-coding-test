@@ -5,7 +5,6 @@ import { createTodo } from '@/app/actions/actions';
 import { ButtonElement } from '../ButtonElement/ButtonElement';
 
 import styles from './CreateForm.module.css';
-import { ButtonActionEnum } from '../../Enum/ButtonAction.enum';
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -29,11 +28,7 @@ export const CreateForm = () => {
         Title:
       </label>
       <input name="title" type="text" className={styles.createFormInput} required />
-      <ButtonElement
-        label="submit"
-        buttonAction={ButtonActionEnum.CREATE}
-        handleButtonAction={handleCreateTodo}
-      />
+      <ButtonElement label="submit" isButtonColored={true} handleButtonAction={handleCreateTodo} />
     </form>
   );
 };

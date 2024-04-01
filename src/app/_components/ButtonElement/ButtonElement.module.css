@@ -16,3 +16,8 @@
   opacity: 0.3;
   cursor: default;
 }
+
+.btnColored {
+  background: #437dcf;
+  border-color: #437dcf;
+}

@@ -1,25 +1,30 @@
 'use client';
 
 import { useFormStatus } from 'react-dom';
-import { ButtonActionEnum } from '../../Enum/ButtonAction.enum';
 import styles from './ButtonElement.module.css';
+import { useMemo } from 'react';
 
-interface IButtonElementProps {
+type ButtonElementProps = {
   label: string;
-  buttonAction: ButtonActionEnum;
-  handleButtonAction: () => void;
-}
+  isButtonColored: boolean;
+  handleButtonAction?: () => void;
+};
 
-export const ButtonElement = (props: IButtonElementProps) => {
+export const ButtonElement = (props: ButtonElementProps) => {
+  const { isButtonColored } = props;
   const { pending } = useFormStatus();
+
+  const buttonModifier = useMemo(() => {
+    return !!isButtonColored ? styles.btnColored : '';
+  }, [isButtonColored]);
 
   return (
     <button
       type="submit"
-      className={styles.buttonElement}
+      className={`${styles.buttonElement} ${buttonModifier}`}
       aria-disabled={pending}
       // Workaround to imitate actions
-      // onClick={props.handleButtonAction}
+      onClick={props.handleButtonAction}
     >
       {props.label}
     </button>

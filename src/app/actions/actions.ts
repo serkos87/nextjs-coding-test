@@ -3,15 +3,15 @@
 // import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
-interface IButtonParams {
+type ButtonParams = {
   id: string;
   title: string;
-}
+};
 
-interface IUpdateParams {
+type UpdateParams = {
   formData?: FormData;
-  buttonData?: IButtonParams;
-}
+  buttonData?: ButtonParams;
+};
 
 export const createTodo = async (prevState: any, formData: FormData) => {
   const schema = z.object({
@@ -70,9 +70,9 @@ export const updateTodo = async (id: string, todoTitle: string) => {
 
 // Mediator to handle delete action not only from form action but also from button event
 // Works quite strange with a button event and should be refactored
-export const deleteTodo = async (params: IUpdateParams) => {
+export const deleteTodo = async (params: UpdateParams) => {
   const { formData, buttonData } = params;
-  let reqParams: IButtonParams;
+  let reqParams: ButtonParams;
 
   if (!!formData) {
     reqParams = getDeleteFormDataParams(formData);
